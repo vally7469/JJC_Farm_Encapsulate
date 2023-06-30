@@ -90,7 +90,7 @@ public class BasePlant : MonoBehaviour
     {
         HarvestInternal();
         Application.plantManager.DestroyPlant(this);
-        GameObject.Find("HarvestManager").PlayHarvest();
+        GameObject.Find("HarvestManager").GetComponent<HarvestManager>().PlayHarvest();
     }
 
     virtual protected void HarvestInternal()
